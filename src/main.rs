@@ -22,7 +22,7 @@ async fn main() -> anyhow::Result<()> {
         std_listener.set_nonblocking(true).unwrap();
         axum::Server::from_tcp(std_listener)
             .unwrap()
-            .serve(app().into_make_service());
+            .serve(app().into_make_service()).await?;
     }
 
     Ok(())
