@@ -1,9 +1,11 @@
 use axum::Router;
 use axum::response::Html;
 use axum::routing::get;
+use std::env;
 
 #[tokio::main(flavor = "current_thread")]
 async fn main() -> anyhow::Result<()> {
+    tracing_subscriber::fmt::init();
 
     #[cfg(not(target_arch = "wasm32"))]
     {
@@ -31,6 +33,14 @@ async fn main() -> anyhow::Result<()> {
 fn app() -> Router {
     Router::new()
         .route("/", get(|| async {
-            Html("Hello, world!".to_string())
+            Html(format!("Hello, world from {}!\n<br/>Time: {:?}", platform(), chrono::offset::Local::now()).to_string())
         }))
+}
+
+fn platform() -> String {
+    let mut name = env::consts::ARCH.to_string();
+    if env::consts::OS.len() > 0 {
+        name = format!("{}-{}", name, env::consts::OS);
+    }
+    name
 }
