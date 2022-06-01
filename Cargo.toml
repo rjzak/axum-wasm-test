@@ -1,0 +1,10 @@
+[package]
+name = "tokio-web-test"
+version = "0.0.1"
+edition = "2021"
+
+[dependencies]
+anyhow = "^1.0.55"
+axum = { git = "https://github.com/rjzak/axum", branch = "wasi_wip", features = ["headers"] }
+# tokio = { path = "../tokio/tokio", features = ["macros", "rt"] }
+tokio = { git = "https://github.com/rjzak/tokio", branch = "wasi_wip", features = ["macros", "rt"] }
