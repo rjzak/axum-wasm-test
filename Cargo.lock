@@ -58,7 +58,7 @@ dependencies = [
  "serde_json",
  "serde_urlencoded",
  "sync_wrapper",
- "tokio 1.18.2 (git+https://github.com/rjzak/tokio?branch=wasi_wip)",
+ "tokio 1.18.2",
  "tower",
  "tower-http",
  "tower-layer",
@@ -85,7 +85,7 @@ dependencies = [
  "anyhow",
  "axum",
  "chrono",
- "tokio 1.18.2 (git+https://github.com/rjzak/tokio?branch=wasi_wip)",
+ "tokio 1.18.2",
  "tracing",
  "tracing-subscriber",
 ]
@@ -311,7 +311,7 @@ dependencies = [
  "itoa",
  "pin-project-lite",
  "socket2",
- "tokio 1.18.2 (git+https://github.com/rjzak/tokio?branch=wasi_wip)",
+ "tokio 1.18.2",
  "tower-service",
  "tracing",
  "want",
@@ -380,7 +380,7 @@ checksum = "2a60c7ce501c71e03a9c9c0d35b861413ae925bd979cc7a4e30d060069aaac8d"
 [[package]]
 name = "mio"
 version = "0.8.3"
-source = "git+https://github.com/rjzak/mio/?branch=wasi_wip#0309baff3c43c68abd120c2fe608770b25c658ed"
+source = "git+https://github.com/rjzak/mio/?branch=wasi_wip#51789149f2f043ad9673aad2c04c89b6c65a8960"
 dependencies = [
  "libc",
  "log",
@@ -604,17 +604,7 @@ dependencies = [
 [[package]]
 name = "tokio"
 version = "1.18.2"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "4903bf0427cf68dddd5aa6a93220756f8be0c34fcfa9f5e6191e103e15a31395"
-dependencies = [
- "once_cell",
- "pin-project-lite",
-]
-
-[[package]]
-name = "tokio"
-version = "1.18.2"
-source = "git+https://github.com/rjzak/tokio?branch=wasi_wip#0698121161ae4c7de54b72cc73f31d482dbe950a"
+source = "git+https://github.com/rjzak/tokio?branch=wasi_wip#49a0a57c67cba0f30279539896a478f9123e0d58"
 dependencies = [
  "libc",
  "mio",
@@ -626,9 +616,19 @@ dependencies = [
 ]
 
 [[package]]
+name = "tokio"
+version = "1.19.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "0f392c8f16bda3456c0b00c6de39cb100449b98de55ac41c6cdd2bfcf53a1245"
+dependencies = [
+ "once_cell",
+ "pin-project-lite",
+]
+
+[[package]]
 name = "tokio-macros"
 version = "1.7.0"
-source = "git+https://github.com/rjzak/tokio?branch=wasi_wip#0698121161ae4c7de54b72cc73f31d482dbe950a"
+source = "git+https://github.com/rjzak/tokio?branch=wasi_wip#49a0a57c67cba0f30279539896a478f9123e0d58"
 dependencies = [
  "proc-macro2",
  "quote",
@@ -645,7 +645,7 @@ dependencies = [
  "futures-core",
  "futures-sink",
  "pin-project-lite",
- "tokio 1.18.2 (registry+https://github.com/rust-lang/crates.io-index)",
+ "tokio 1.19.0",
 ]
 
 [[package]]
@@ -658,7 +658,7 @@ dependencies = [
  "futures-util",
  "pin-project",
  "pin-project-lite",
- "tokio 1.18.2 (registry+https://github.com/rust-lang/crates.io-index)",
+ "tokio 1.19.0",
  "tokio-util",
  "tower-layer",
  "tower-service",
