@@ -5,5 +5,8 @@ cargo clean
 echo "Updating..."
 cargo update
 echo "Building..."
-cargo build --target=wasm32-wasi
-cargo build --target=x86_64-unknown-linux-gnu
+if cargo build --target=wasm32-wasi; then
+    cargo build --target=x86_64-unknown-linux-gnu
+else
+    echo "Build error!"
+fi
