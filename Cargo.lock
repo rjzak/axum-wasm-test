@@ -301,7 +301,7 @@ checksum = "c4a1e36c821dbe04574f602848a19f742f4fb3c98d40449f11bcad18d6b17421"
 [[package]]
 name = "hyper"
 version = "0.14.19"
-source = "git+https://github.com/rjzak/hyper?branch=wasi_wip#d28fbdc9be233e9adb709fa7f8eb66fce76a632a"
+source = "git+https://github.com/rjzak/hyper?branch=wasi_wip#b46572676415f7205e146017da36767becd9e1d1"
 dependencies = [
  "bytes",
  "futures-channel",
@@ -564,9 +564,9 @@ dependencies = [
 
 [[package]]
 name = "smallvec"
-version = "1.8.0"
+version = "1.8.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "f2dd574626839106c320a323308629dcb1acfc96e32a8cba364ddc61ac23ee83"
+checksum = "cc88c725d61fc6c3132893370cac4a0200e3fedf5da8331c570664b1987f5ca2"
 
 [[package]]
 name = "socket2"
@@ -627,7 +627,7 @@ dependencies = [
 [[package]]
 name = "tokio"
 version = "1.19.2"
-source = "git+https://github.com/rjzak/tokio?branch=wasi_wip#40cf5830d8e0928ed11ffc91729b6d3663aef7ac"
+source = "git+https://github.com/rjzak/tokio?branch=wasi_wip#7cb7c7a913408c68e0426e9af5fc7399d2c1ebb9"
 dependencies = [
  "libc",
  "mio",
@@ -642,7 +642,7 @@ dependencies = [
 [[package]]
 name = "tokio-macros"
 version = "1.8.0"
-source = "git+https://github.com/rjzak/tokio?branch=wasi_wip#40cf5830d8e0928ed11ffc91729b6d3663aef7ac"
+source = "git+https://github.com/rjzak/tokio?branch=wasi_wip#7cb7c7a913408c68e0426e9af5fc7399d2c1ebb9"
 dependencies = [
  "proc-macro2",
  "quote",
@@ -721,9 +721,9 @@ dependencies = [
 
 [[package]]
 name = "tracing-core"
-version = "0.1.27"
+version = "0.1.28"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "7709595b8878a4965ce5e87ebf880a7d39c9afc6837721b21a5a816a8117d921"
+checksum = "7b7358be39f2f274f322d2aaed611acc57f382e8eb1e5b48cb9ae30933495ce7"
 dependencies = [
  "once_cell",
  "valuable",
