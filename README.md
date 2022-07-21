@@ -1,5 +1,9 @@
 # Test code for Axum, Tokio, WASI
 
+## Compiling:
+1. Build with Tokio unstable flag:
+    * `RUSTFLAGS="--cfg tokio_unstable" cargo build`
+
 ## Run with Enarx:
 1. Get [Enarx](https://github.com/enarx/enarx)
 2. Run: `CARGO_TARGET_WASM32_WASI_RUNNER="enarx run --wasmcfgfile Enarx.toml" cargo run --target=wasm32-wasi`
