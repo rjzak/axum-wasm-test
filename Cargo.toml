@@ -1,3 +1,13 @@
+[patch.crates-io]
+#axum = { git = "https://github.com/rjzak/axum", branch = "wasi_wip" }
+#axum-core = { git = "https://github.com/rjzak/axum", branch = "wasi_wip" }
+#axum-extra = { git = "https://github.com/rjzak/axum", branch = "wasi_wip" }
+#axum-macros = { git = "https://github.com/rjzak/axum", branch = "wasi_wip" }
+tokio = { git = "https://github.com/tokio-rs/tokio", branch = "master" }
+tokio-macros = { git = "https://github.com/tokio-rs/tokio", branch = "master" }
+tokio-util = { git = "https://github.com/tokio-rs/tokio", branch = "master" }
+hyper = { git = "https://github.com/rjzak/hyper", branch = "wasi_wip" }
+
 [package]
 name = "axum-tokio-wasm-test"
 version = "0.0.1"
@@ -5,13 +15,16 @@ edition = "2021"
 
 [dependencies]
 anyhow = "^1.0.55"
-axum = { git = "https://github.com/rjzak/axum", branch = "wasi_wip", features = ["headers"] }
+# axum = { git = "https://github.com/rjzak/axum", branch = "wasi_wip", features = ["headers"] }
+axum = { version = "0.5.15", features = ["headers"] }
 tracing-subscriber = { version="^0.3.8", features = ["env-filter"] }
 tracing = "^0.1.29"
 chrono = "0.4"
 
 [target.'cfg(target_arch = "wasm32")'.dependencies]
-tokio = { git = "https://github.com/tokio-rs/tokio", branch = "master", features = ["macros", "rt"] }
+# tokio = { git = "https://github.com/tokio-rs/tokio", branch = "master", features = ["macros", "rt"] }
+tokio = { version = "1.20.1", features = ["macros", "rt"] }
 
 [target.'cfg(not(target_arch = "wasm32"))'.dependencies]
-tokio = { git = "https://github.com/tokio-rs/tokio", branch = "master", features = ["macros", "rt-multi-thread"] }
+# tokio = { git = "https://github.com/tokio-rs/tokio", branch = "master", features = ["macros", "rt-multi-thread"] }
+tokio = { version = "1", features = ["macros", "rt-multi-thread"] }
